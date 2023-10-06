@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --grey-light: rgb(241, 241, 241);
+    --grey-medium: rgb(182, 182, 182);
+    --grey-dark: rgb(163, 163, 163);
+    --green-light: rgb(117, 200, 132);
+    --green-dark: rgb(104, 178, 118);
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: 2% 78% 20%;
+    grid-template-areas:
+    "header header main"
+    "photo photo main"
+    "call message pricing";
+}
+
+header {
+    grid-area: header;
+    text-align: left;
+    color: var(--grey-medium);
+    padding: 10px;
+}
+
+main {
+    grid-area: main;
+    background-color: var(--grey-light);
+    padding: 0 40px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+p {
+    font-size: 20px;
+}
+
+.flex-ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headshot {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 210px;
+    width: 210px;
+    border: 5px solid var(--green-light);
+}
+
+#photo {
+    grid-area: photo;
+}
+
+#job-description {
+    border-left: 5px solid var(--green-dark);
+    padding: 0 15px;
+    color: var(--grey-dark);
+}
+
+#pricing {
+    grid-area: pricing;
+    background-color: var(--grey-light);
+    padding: 13px 40px;
+    margin: 0;
+}
+
+#call {
+    grid-area: call;
+    background-color: var(--green-light);
+}
+
+#message {
+    grid-area: message;
+    background-color: var(--green-dark);
+}
