@@ -55,16 +55,16 @@ p {
     align-items: center;
 }
 
+#photo {
+    grid-area: photo;
+}
+
 #headshot {
     border-radius: 50%;
     object-fit: cover;
     height: 210px;
     width: 210px;
     border: 5px solid var(--green-light);
-}
-
-#photo {
-    grid-area: photo;
 }
 
 #job-description {
